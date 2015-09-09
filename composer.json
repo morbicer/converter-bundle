@@ -1,0 +1,23 @@
+{
+    "name": "morbicer/converter-bundle",
+    "description": "Currency converting bundle for Symfony2. Supports multiple exchange rate providers.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marek Saktor",
+            "email": "mark@jukeboxprint.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "mathiasverraes/money": "^1.3@dev"
+    },
+    "suggests": {
+        "doctrine/doctrine-bundle": "If you want to cache exchange rates instead of new API request every time"
+    },
+    "autoload": {
+        "psr-4": { "Sakiro\\ConverterBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}
