@@ -1,6 +1,6 @@
 <?php
 
-namespace Sakiro\ConverterBundle\Controller;
+namespace Morbicer\ConverterBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +23,7 @@ class ApiController extends Controller
         }
 
         try {
-            $convert = $this->get('sakiro_converter.convert');
+            $convert = $this->get('morbicer_converter.convert');
             $converted = $convert->convert($amount, $from, $to);
             $result = array(
                 'amount' => $converted->getAmount()/100,

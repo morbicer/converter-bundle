@@ -1,6 +1,6 @@
 <?php
 
-namespace Sakiro\ConverterBundle\Provider;
+namespace Morbicer\ConverterBundle\Provider;
 
 interface RateProviderInterface
 {

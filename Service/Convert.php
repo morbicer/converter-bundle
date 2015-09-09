@@ -1,8 +1,8 @@
 <?php
 
-namespace Sakiro\ConverterBundle\Service;
+namespace Morbicer\ConverterBundle\Service;
 
-use Sakiro\ConverterBundle\Provider\RateProviderInterface;
+use Morbicer\ConverterBundle\Provider\RateProviderInterface;
 use Doctrine\Common\Cache\Cache;
 use Money\Money;
 use Money\Currency;

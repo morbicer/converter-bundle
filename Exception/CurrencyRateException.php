@@ -1,6 +1,6 @@
 <?php
 
-namespace Sakiro\ConverterBundle\Exception;
+namespace Morbicer\ConverterBundle\Exception;
 
 class CurrencyRateException extends \RuntimeException
 {

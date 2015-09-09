@@ -17,7 +17,7 @@
         "doctrine/doctrine-bundle": "If you want to cache exchange rates instead of new API request every time"
     },
     "autoload": {
-        "psr-4": { "Sakiro\\ConverterBundle\\": "" }
+        "psr-4": { "Morbicer\\ConverterBundle\\": "" }
     },
     "minimum-stability": "dev"
 }

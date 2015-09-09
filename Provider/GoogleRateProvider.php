@@ -1,10 +1,10 @@
 <?php
 
-namespace Sakiro\ConverterBundle\Provider;
+namespace Morbicer\ConverterBundle\Provider;
 
 use Money\Currency;
 use Money\CurrencyPair;
-use Sakiro\ConverterBundle\Exception\CurrencyRateException;
+use Morbicer\ConverterBundle\Exception\CurrencyRateException;
 
 class GoogleRateProvider implements RateProviderInterface
 {

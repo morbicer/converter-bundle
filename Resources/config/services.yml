@@ -1,10 +1,10 @@
 parameters:
-    sakiro_converter.provider.google.class: Sakiro\ConverterBundle\Provider\GoogleRateProvider
-    sakiro_converter.provider.chain.class: Sakiro\ConverterBundle\Provider\ChainRateProvider
-    sakiro_converter.provider.yahoo.class: Sakiro\ConverterBundle\Provider\YahooRateProvider
-    sakiro_converter.provider.currency_api.class: Sakiro\ConverterBundle\Provider\CurrencyApiRateProvider
+    morbicer_converter.provider.google.class: Morbicer\ConverterBundle\Provider\GoogleRateProvider
+    morbicer_converter.provider.chain.class: Morbicer\ConverterBundle\Provider\ChainRateProvider
+    morbicer_converter.provider.yahoo.class: Morbicer\ConverterBundle\Provider\YahooRateProvider
+    morbicer_converter.provider.currency_api.class: Morbicer\ConverterBundle\Provider\CurrencyApiRateProvider
 
 services:
-    sakiro_converter.convert:
-        class: Sakiro\ConverterBundle\Service\Convert
-        arguments: [@sakiro_converter.provider.default]
+    morbicer_converter.convert:
+        class: Morbicer\ConverterBundle\Service\Convert
+        arguments: [@morbicer_converter.provider.default]

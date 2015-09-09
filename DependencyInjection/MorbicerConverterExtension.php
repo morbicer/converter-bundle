@@ -1,6 +1,6 @@
 <?php
 
-namespace Sakiro\ConverterBundle\DependencyInjection;
+namespace Morbicer\ConverterBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class SakiroConverterExtension extends Extension
+class MorbicerConverterExtension extends Extension
 {
     protected $container;
 
@@ -36,8 +36,8 @@ class SakiroConverterExtension extends Extension
             if ($name == 'chain') {
                 $chain = $this->addProvider('chain');
                 foreach ($config['providers']['chain'] as $name) {
-                    if ($this->container->hasDefinition('sakiro_converter.provider.'.$name)) {
-                        $chain->addMethodCall('addProvider', array($this->container->getDefinition('sakiro_converter.provider.'.$name)));
+                    if ($this->container->hasDefinition('morbicer_converter.provider.'.$name)) {
+                        $chain->addMethodCall('addProvider', array($this->container->getDefinition('morbicer_converter.provider.'.$name)));
                     }
                 }
             }
@@ -46,8 +46,8 @@ class SakiroConverterExtension extends Extension
             }
         }
 
-        $defaultProvider = $this->container->getDefinition('sakiro_converter.provider.'.$config['default_provider']);
-        $this->container->setDefinition('sakiro_converter.provider.default', $defaultProvider);
+        $defaultProvider = $this->container->getDefinition('morbicer_converter.provider.'.$config['default_provider']);
+        $this->container->setDefinition('morbicer_converter.provider.default', $defaultProvider);
     }
 
 
@@ -55,13 +55,13 @@ class SakiroConverterExtension extends Extension
 
     protected function addProvider($name, array $arguments = array())
     {
-        $provider = new Definition('%sakiro_converter.provider.'.$name.'.class%', $arguments);
+        $provider = new Definition('%morbicer_converter.provider.'.$name.'.class%', $arguments);
 
         $provider
             ->setPublic(false)
-            ->addTag('sakiro_converter.provider');
+            ->addTag('morbicer_converter.provider');
 
-        $this->container->setDefinition('sakiro_converter.provider.'.$name, $provider);
+        $this->container->setDefinition('morbicer_converter.provider.'.$name, $provider);
         return $provider;
     }
 }
