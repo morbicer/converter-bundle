@@ -8,22 +8,11 @@ use Morbicer\ConverterBundle\Exception\CurrencyRateException;
 
 class CurrencyApiRateProvider implements RateProviderInterface
 {
-    //TODO obsolete since Nov 2013
-    const URL = 'http://currency-api.appspot.com/api/%s/%s.json?key=%s';
+    const URL = 'http://currency-api.appspot.com/api/%s/%s.json';
 
-    /**
-     * @var string
-     */
-    private $key;
-
-    public function __construct($key)
+    public function __construct($config = array())
     {
-        if (empty($key)) {
-            throw new \InvalidArgumentException('An API key must be provided in config array');
-        }
-        $this->key = $key;
     }
-
 
     public function getCurrencyPair(Currency $counterCurrency, Currency $baseCurrency)
     {
