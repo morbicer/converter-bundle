@@ -6,14 +6,14 @@
     "authors": [
         {
             "name": "Marek Saktor",
-            "email": "mark@jukeboxprint.com"
+            "email": "marek.saktor@gmail.com"
         }
     ],
     "require": {
         "symfony/framework-bundle": "~2.3",
         "mathiasverraes/money": "^1.3@dev"
     },
-    "suggests": {
+    "suggest": {
         "doctrine/doctrine-bundle": "If you want to cache exchange rates instead of new API request every time"
     },
     "autoload": {
